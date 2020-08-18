@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="renderer" content="webkit">
+  <title>学员管理</title>
+  <link rel="stylesheet" href="/css/pintuer.css">
+  <link rel="stylesheet" href="/css/admin.css">
+  <link rel="stylesheet" href="/css/students.css">
+  <script src="/js/jquery.js"></script>
+  <script src="/js/pintuer.js"></script>
+  <script src="/js/students.js"></script>
+</head>
+
+<body>
+  <div class="panel admin-panel">
+    <div class="panel-head"><strong class="icon-reorder"> 学员信息</strong></div>
+    <div class="padding border-bottom">
+      <ul class="search">
+        <li>
+          <button type="button" class="button border-green" id="checkall"><span class="icon-check"></span> 全选</button>
+          <button type="submit" class="button border-red"><span class="icon-trash-o"></span> 批量删除</button>
+        </li>
+      </ul>
+    </div>
+    <table id="stu_list" class="table table-hover text-center">
+      <tr>
+        <th width="5%">ID</th>
+        <th width="10%">账号</th>
+        <th width="10%">姓名</th>
+        <th width="5%">年龄</th>
+        <th width="10%">电话</th>
+        <th width="10%">邮箱</th>
+        <th width="20%">地址</th>
+        <th width="10%">报名时间</th>
+        <th width="20%">操作</th>
+      </tr>
+    </table>
+    <table class="table text-center">
+      <tr>
+        <td colspan="8">
+          <div class="pagelist">
+            <a href="">上一页</a>
+            <a>1</a><a>2</a><a>3</a>
+            <a>下一页</a>
+            <a>尾页</a>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <table id="model">
+    <tr class="moban">
+      <td><input type="checkbox" name="id[]" value="1" />$id$</td>
+      <td class="id">$_id$</td>
+      <td class="username">$name$</td>
+      <td class="age">$age$</td>
+      <td class="tel">$tel$</td>
+      <td class="email">$email$</td>
+      <td class="address">$address$</td>
+      <td class="date">$date$</td>
+      <td>
+        <button class="edit button border-green"><span class="icon-edit"></span> 编辑</button>
+        <button class="del button border-red"><span class="icon-trash-o"></span>删除</button>
+      </td>
+    </tr>
+  </table>
+<div id="shadow">
+ <div class="panel admin-panel set_box">
+    <div class="panel-head bg-green"><strong><span class="icon-key"></span> 修改学员信息</strong> <span class="icon-times text-large" id="close"></span></div>
+    <div class="body-content">
+      <div class="form-x">
+        <div class="form-group">
+          <div class="label">
+            账号：
+          </div>
+          <div class="field">
+            <input type="text" id="set_account" class="input w70" disabled />
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="label">
+            姓名：
+          </div>
+          <div class="field">
+            <input type="text" id="set_name" class="input w70" />
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="label">
+            年龄：
+          </div>
+          <div class="field">
+            <input type="text" id="set_age" class="input w70" />
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="label">
+            电话：
+          </div>
+          <div class="field">
+            <input type="text" id="set_tel" class="input w70" />
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="label">
+            邮箱：
+          </div>
+          <div class="field">
+            <input type="text" id="set_email" class="input w70" />
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="label">
+            地址：
+          </div>
+          <div class="field">
+            <input type="text" id="set_add" class="input w70" />
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="label">
+            日期：
+          </div>
+          <div class="field">
+            <input type="text" id="set_date" class="input w70" />
+          </div>
+        </div>
+        <div class="form-group text-center">
+          <div class="field">
+            <button class="button bg-red icon-times-circle-o" id="cancle"> 取消</button>
+            <button class="button bg-green icon-check-circle-o" id="change_sure"> 提交</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+
+</body>
+
+</html>

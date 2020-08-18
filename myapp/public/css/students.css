@@ -1,0 +1,31 @@
+#model{
+    display: none;
+}
+/* 蒙版 */
+#shadow{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-color: rgba(15, 15, 15, 0.6);
+    display: none;
+}
+
+
+.set_box{
+    width: 500px;
+    height: 600px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+.body-content{
+    padding-left: 15px;
+}
+#close{
+    float: right;
+    margin-top: -10px;
+    cursor: pointer;
+}
